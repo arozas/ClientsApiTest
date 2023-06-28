@@ -48,7 +48,6 @@ namespace ClientsApiTest.Models.Repository
 
             if (clientItem != null)
             {
-                clientItem.Id = client.Id;
                 clientItem.Name = client.Name;
                 clientItem.LastName = client.LastName;
                 clientItem.BirthDate = client.BirthDate;
@@ -57,7 +56,6 @@ namespace ClientsApiTest.Models.Repository
                 clientItem.MobilPhone = client.MobilPhone;
                 clientItem.Email = client.Email;
 
-                //_context.Update(client);
                 await _context.SaveChangesAsync();
             }
         }
@@ -76,7 +74,6 @@ namespace ClientsApiTest.Models.Repository
             {
                 clientItem.Active = false;
 
-                //_context.Update(client);
                 await _context.SaveChangesAsync();
             }
         }

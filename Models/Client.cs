@@ -43,7 +43,32 @@ namespace ClientsApiTest.Models
                 yield return new ValidationResult("The date of birth cannot be greater than the current date.");
             }
 
-            if(Cuit.Length > 13 && Cuit.Length < 11)
+            if(Cuit.Length == 11)
+            {
+                int pos = 0;
+                bool fail = false;
+                foreach (var Char in Cuit)
+                {
+                    if (char.IsDigit(Char))
+                    {
+                        pos++;
+                    }
+                    else if(Char == '-' && pos == 2)
+                    {
+                        pos++;
+                    }
+                    else if (Char == '-' && pos == 11)
+                    {
+                        pos++;
+                    }
+                    else
+                    {
+                        yield return new ValidationResult("Cuit is not valid.");
+                    }
+
+                }
+            }
+            else
             {
                 yield return new ValidationResult("Cuit is not valid.");
             }

@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClientsApiTest.Migrations
 {
     [DbContext(typeof(AplicationDataBaseContext))]
-    [Migration("20230628051617_Initial")]
+    [Migration("20230628134339_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
