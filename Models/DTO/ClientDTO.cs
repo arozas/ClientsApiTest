@@ -2,6 +2,9 @@
 
 namespace ClientsApiTest.Models.DTO
 {
+    /// <summary>
+    /// DTO (Data Transfer Object) para representar los datos de un cliente.
+    /// </summary>
     public class ClientDTO
     {
         [Key]

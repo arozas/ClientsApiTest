@@ -7,6 +7,9 @@ using ClientsApiTest.Models;
 
 namespace ClientsApiTest.Controllers
 {
+    /// <summary>
+    /// Controlador para la gestión de clientes.
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class ClientController : ControllerBase

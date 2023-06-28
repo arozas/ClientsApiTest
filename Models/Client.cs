@@ -2,6 +2,9 @@
 
 namespace ClientsApiTest.Models
 {
+    /// <summary>
+    /// Clase que representa a un cliente.
+    /// </summary>
     public class Client:IValidatableObject
     {
         
@@ -35,15 +38,21 @@ namespace ClientsApiTest.Models
         [Required]
         public bool Active { get; set; }
 
-
+        /// <summary>
+        /// Método de validación personalizada para la entidad Client.
+        /// </summary>
+        /// <param name="validationContext">Contexto de validación.</param>
+        /// <returns>Una colección de resultados de validación.</returns>
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
-            if(BirthDate > DateTime.Now)
+            // Validar que la fecha de nacimiento no sea mayor que la fecha actual.
+            if (BirthDate > DateTime.Now)
             {
                 yield return new ValidationResult("The date of birth cannot be greater than the current date.");
             }
 
-            if(Cuit.Length == 11)
+            // Validar el formato y longitud del CUIT.
+            if (Cuit.Length == 11)
             {
                 int pos = 0;
                 bool fail = false;
