@@ -22,7 +22,8 @@ El proyecto se divide en las siguientes partes:
 1. Clona este repositorio en tu máquina local.
 2. Abre el proyecto en tu IDE preferido (por ejemplo, Visual Studio).
 3. Configura la cadena de conexión a tu base de datos en el archivo `appsettings.json`.
-4. Compila y ejecuta el proyecto.
+4. Abre una terminal y ejecuta Add-Migration y Update-database para crear la estructura de datos en la base.
+5. Compila y ejecuta el proyecto.
 
 ## Endpoints de la API
 
